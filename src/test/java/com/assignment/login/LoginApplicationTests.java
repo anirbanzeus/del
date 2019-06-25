@@ -1,4 +1,4 @@
-package com.gpch.login;
+package com.assignment.login;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

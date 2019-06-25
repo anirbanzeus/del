@@ -1,9 +1,9 @@
-package com.gpch.login.service;
+package com.assignment.login.service;
 
-import com.gpch.login.model.Role;
-import com.gpch.login.model.User;
-import com.gpch.login.repository.RoleRepository;
-import com.gpch.login.repository.UserRepository;
+import com.assignment.login.model.Role;
+import com.assignment.login.model.User;
+import com.assignment.login.repository.RoleRepository;
+import com.assignment.login.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,11 +31,11 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public User saveUser(User user) {
+    public User saveUser(User user, String selectedRole) {
     	Role userRole;
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setActive(1);
-        if(user.getRoles().contains("USER")) {
+        if(selectedRole.equalsIgnoreCase("USER")) {
         	userRole = roleRepository.findByRole("USER");
         }else {
         	userRole = roleRepository.findByRole("ADMIN");

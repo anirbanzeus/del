@@ -1,4 +1,4 @@
-package com.gpch.login.model;
+package com.assignment.login.model;
 
 import java.util.Arrays;
 import java.util.List;

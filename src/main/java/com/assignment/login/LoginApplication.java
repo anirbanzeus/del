@@ -1,4 +1,4 @@
-package com.gpch.login;
+package com.assignment.login;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

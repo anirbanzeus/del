@@ -1,4 +1,4 @@
-package com.gpch.login.configuration;
+package com.assignment.login.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

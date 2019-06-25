@@ -1,4 +1,4 @@
-package com.gpch.login.model;
+package com.assignment.login.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -54,11 +54,11 @@
                             class="validation-message"></label>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group">                  
                     <div class="col-sm-9">
-						<input type="radio" name="selectedRole" value="USER"> User<br>
-						<input type="radio" name="selectedRole" value="ADMIN"> Admin<br>
-                    </div>
+						<input type="radio" name="role" value="User" checked> User<br>
+						<input type="radio" name="role" value="Admin"> Admin<br>
+					</div>
                 </div>
 
                 <div class="form-group">
@@ -74,6 +74,15 @@
     </div>
 </div>
 
-
+<script>
+    $(document).ready(
+        function (e) {
+            $("input[type=radio]").change(
+                function () {
+                    $('input[type=radio]:checked').not(this)
+                        .prop('checked', false);
+                });
+        });
+</script>
 </body>
 </html>
